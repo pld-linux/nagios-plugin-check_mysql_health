@@ -13,6 +13,7 @@ BuildRequires:	mysql-devel
 BuildRequires:	nagios-plugins-devel
 BuildRequires:	sed >= 4.0
 Requires:	nagios-core
+Obsoletes:	nagios-plugin-check_mysql_perf
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %define		_sysconfdir	/etc/nagios/plugins
