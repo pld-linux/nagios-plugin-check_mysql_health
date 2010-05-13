@@ -11,6 +11,9 @@ Source0:	http://labs.consol.de/wp-content/uploads/2010/03/check_mysql_health-%{v
 # Source0-md5:	f4ce441cb52d1fb2e422654e37867d5e
 Source1:	%{plugin}.cfg
 URL:		http://labs.consol.de/lang/de/nagios/check_mysql_health/
+BuildRequires:	autoconf
+BuildRequires:	automake
+BuildRequires:	libtool
 BuildRequires:	rpm-perlprov >= 4.1-13
 BuildRequires:	sed >= 4.0
 Requires:	nagios-common
