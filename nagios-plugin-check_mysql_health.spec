@@ -4,7 +4,7 @@ Summary:	Nagios plugin: monitor various performance-related characteristics of a
 Summary(pl.UTF-8):	Wtyczka Nagiosa monitorująca parametry wydajnościowe bazy danych MySQL
 Name:		nagios-plugin-%{plugin}
 Version:	2.1.3
-Release:	2
+Release:	3
 License:	GPL v2+
 Group:		Networking
 Source0:	http://labs.consol.de/wp-content/uploads/2010/10/check_mysql_health-%{version}.tar.gz
@@ -16,7 +16,7 @@ BuildRequires:	automake
 BuildRequires:	libtool
 BuildRequires:	rpm-perlprov >= 4.1-13
 BuildRequires:	sed >= 4.0
-Requires:	nagios-common >= 3.1.2-4
+Requires:	nagios-common >= 3.2.3-3
 Obsoletes:	nagios-plugin-check_mysql_perf
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
