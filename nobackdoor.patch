@@ -1,0 +1,33 @@
+From 9f60aab7d08a61638cc586bafe007b97ea614f3f Mon Sep 17 00:00:00 2001
+From: Vincevrp <vince@vince.sh>
+Date: Mon, 27 Feb 2023 11:48:25 +0100
+Subject: [PATCH] Remove shell backdoor parameter
+
+---
+ plugins-scripts/check_mysql_health.pl | 6 ------
+ 1 file changed, 6 deletions(-)
+
+diff --git a/plugins-scripts/check_mysql_health.pl b/plugins-scripts/check_mysql_health.pl
+index 613dc19..e4cbbf1 100755
+--- a/plugins-scripts/check_mysql_health.pl
++++ b/plugins-scripts/check_mysql_health.pl
+@@ -314,7 +314,6 @@ ($$)
+     "method=s",
+     "runas|r=s",
+     "scream",
+-    "shell",
+     "eyecandy",
+     "encode",
+     "units=s",
+@@ -475,11 +474,6 @@ ($$)
+   exit;
+ }
+ 
+-if (exists $commandline{shell}) {
+-  # forget what you see here.
+-  system("/bin/sh");
+-}
+-
+ if (! exists $commandline{statefilesdir}) {
+   if (exists $ENV{OMD_ROOT}) {
+     $commandline{statefilesdir} = $ENV{OMD_ROOT}."/var/tmp/check_mysql_health";
