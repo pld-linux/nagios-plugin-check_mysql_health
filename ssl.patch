@@ -1,0 +1,11 @@
+diff -ru check_mysql_health-ad90395e08beb1e24c428a056d81bfb7c624c929.org/plugins-scripts/Nagios/DBD/MySQL/Server.pm check_mysql_health-ad90395e08beb1e24c428a056d81bfb7c624c929/plugins-scripts/Nagios/DBD/MySQL/Server.pm
+--- check_mysql_health-ad90395e08beb1e24c428a056d81bfb7c624c929.org/plugins-scripts/Nagios/DBD/MySQL/Server.pm	2016-05-13 11:13:09.000000000 +0200
++++ check_mysql_health-ad90395e08beb1e24c428a056d81bfb7c624c929/plugins-scripts/Nagios/DBD/MySQL/Server.pm	2025-10-27 22:00:34.747637952 +0100
+@@ -975,6 +975,7 @@
+     }
+     $self->{dsn} = "DBI:mysql:";
+     $self->{dsn} .= sprintf "database=%s", $self->{database};
++    $self->{dsn} .= ";mysql_ssl=1;mysql_ssl_mode=PREFERRED";
+     if ($self->{mycnf}) {
+       $self->{dsn} .= sprintf ";mysql_read_default_file=%s", $self->{mycnf};
+       if ($self->{mycnfgroup}) {
